@@ -1,0 +1,41 @@
+EXP:
+    ID: MITIndoor67
+    OUTPUT_DIR: Results
+
+DATASET:
+    NAME: MITIndoor67
+    ROOT: /home/vpu/Semantic-Aware-Scene-Recognition/Data/Datasets
+    SCENE_LABELS: ./Data/Datasets/MITIndoor67/scene_names.txt
+    SEM_LABELS: ./Data/Datasets/ADEChallengeData2016/objectInfo150.txt
+    N_CLASSES_SCENE: 67
+    N_CLASSES_SEM: 151
+
+DATALOADER:
+    NUM_WORKERS: 8
+
+MODEL:
+    PATH: ./Data/Model Zoo/MITIndoor67/
+    NAME: SAScene_ResNet18_MIT
+    ONLY_RGB: FALSE
+    ONLY_SEM: FALSE
+
+TRAINING:
+    PRINT_FREQ: 10
+    PRECOMPUTED_SEM: TRUE
+    BATCH_SIZE:
+        TRAIN: 100
+        TEST: 100
+    LR: 2.5e-4
+    LR_DECAY: 10
+    MOMENTUM: 0.9
+    OPTIMIZER: DFW
+    POLY_POWER: 0.9
+    WEIGHT_DECAY: 5.0e-4
+    AVERAGE_LOSS: 20
+
+VALIDATION:
+    PRINT_FREQ: 10
+    BATCH_SIZE:
+        TRAIN: 100
+        TEST: 10
+    TEN_CROPS: TRUE
