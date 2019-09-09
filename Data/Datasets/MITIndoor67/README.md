@@ -1,5 +1,5 @@
 # MIT Indoor 67 Dataset Setup
-Instructions to download and setup [MIT Indoor 67 Dataset](http://web.mit.edu/torralba/www/indoor.html).
+Proceed with the following instructions to download and setup MIT Indoor 67 Dataset [[1](http://web.mit.edu/torralba/www/indoor.html)].
 
 ## Setup
 ### RGB Images

@@ -1,5 +1,5 @@
 # SUN 397 Dataset Setup
-Instructions to download and setup [SUN 397 Dataset](https://groups.csail.mit.edu/vision/SUN/).
+Proceed with the following instructions to download and setup SUN 397 Dataset [[1](https://groups.csail.mit.edu/vision/SUN/)].
 
 ## Setup
 ### RGB Images

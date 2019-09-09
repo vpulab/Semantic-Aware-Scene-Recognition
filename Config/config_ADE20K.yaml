@@ -4,7 +4,7 @@ EXP:
 
 DATASET:
     NAME: ADEChallengeData2016
-    ROOT: /home/vpu/Semantic-Aware-Scene-Recognition/Data/Datasets
+    ROOT: ./Data/Datasets/
     SCENE_LABELS: ./Data/Datasets/ADEChallengeData2016/sceneCategories.txt
     SEM_LABELS: ./Data/Datasets/ADEChallengeData2016/objectInfo150.txt
     N_CLASSES_SCENE: 1055

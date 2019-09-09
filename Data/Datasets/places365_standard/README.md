@@ -1,5 +1,5 @@
 # Places 365 Dataset Setup
-Instructions to download and setup [Places 365 Dataset]([http://places2.csail.mit.edu/index.html](http://places2.csail.mit.edu/index.html)).
+Proceed with the following instructions to download and setup Places 365 Dataset [[1](http://places2.csail.mit.edu/index.html)].
 
 ## Setup
 ### RGB Images

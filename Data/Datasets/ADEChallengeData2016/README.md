@@ -1,5 +1,5 @@
 # ADE20K Dataset Setup
-Instructions to download and setup [ADE20K Dataset](https://groups.csail.mit.edu/vision/datasets/ADE20K/).
+Proceed with the following instructions to download and setup ADE20K dataset [[1](https://groups.csail.mit.edu/vision/datasets/ADE20K/)].
 
 ## Setup
 ### RGB Images

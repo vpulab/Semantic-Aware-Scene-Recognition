@@ -74,11 +74,16 @@ The repository has been tested in the following software versions.
  - Ubuntu 16.04
  - Python 3.6
  - Anaconda 4.6
+ 
+### Clone Repository
+Clone repository running the following command:
+
+	$ git clone https://github.com/vpulab/Semantic-Aware-Scene-Recognition.git
 
 ### Anaconda Enviroment
-To create and setup the Anaconda Envirmorent run the following terminal command.
+To create and setup the Anaconda Envirmorent run the following terminal command from the repository folder:
 
-    $ conda env create -f configs/Conda_Env.yml
+    $ conda env create -f Config/Conda_Env.yml
     $ conda activate SA-Scene-Recognition
 
 ### Datasets
@@ -94,6 +99,10 @@ Download and setup instructions for each datasets are provided in the follwing l
 
 ### Model Zoo
 In order to evaluate the models independently, download them from the following links and indicate the path in YAML configuration files (Usually `/Data/Model Zoo/DATASET FOLDER`).
+
+[**Recommended**] Alternatively you can run the following script from the repository folder to download all the available Model Zoo:
+
+    bash ./Scripts/download_ModelZoo.sh
 
 **ADE20K**
  - [Ours](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EdjBkchzYmxMtemweugTNp8BAK_kzUmHwvFbmXgsE_VKRQ?download=1)
@@ -114,10 +123,6 @@ In order to evaluate the models independently, download them from the following 
  - [Ours](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/Eco7I0NbpWFFpJdYjT1om38BX2aEBR1WXXzflE2YykT0qA?download=1)
  - [RGB Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EUaPpF5MpkNCqDd04GMVnYEB6BnH5inElN9ve_trAiWg-A?download=1)
  - [Semantic Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/Ea_B3l8vdRtJg3fjhwm7KeIBCbDGV5L2MOtpo9E5GGBo3Q?download=1)
-
-[**Recommended**] Alternatively you can run the following script from the repository folder to download all the available Model Zoo:
-
-    bash ./Scripts/download_ModelZoo.sh
 	
 ### Run Evaluation
 In order to evaluate models run `evaluation.py` file from the respository folder indicating the dataset YAML configuration path:

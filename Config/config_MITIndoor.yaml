@@ -4,7 +4,7 @@ EXP:
 
 DATASET:
     NAME: MITIndoor67
-    ROOT: /home/vpu/Semantic-Aware-Scene-Recognition/Data/Datasets
+    ROOT: ./Data/Datasets/
     SCENE_LABELS: ./Data/Datasets/MITIndoor67/scene_names.txt
     SEM_LABELS: ./Data/Datasets/ADEChallengeData2016/objectInfo150.txt
     N_CLASSES_SCENE: 67
