@@ -1,4 +1,4 @@
-# Semantic Aware-Scene-Recognition
+# Semantic-Aware Scene Recognition
 Official Pytorch Implementation of [Semantic-Aware Scene Recognition](https://arxiv.org/abs/1909.02410) by Alejandro López-Cifuentes, Marcos Escudero-Viñolo, Jesús Bescós and Álvaro García-Martín.
 
 ![Example Focus](Docs/ExampleFocus.png)
@@ -143,11 +143,11 @@ Computed performance metrics for both training and validation sets are:
 ## Citation
 If you find this work useful, please consider citing:
 ```
-@inproceedings{XX,
-  title={XXXX},
-  author={XXX},
-  booktitle={XXX},
-  year={XXX}
+@article{lopez2019semantic,
+  title={Semantic-Aware Scene Recognition},
+  author={L{\'o}pez-Cifuentes, Alejandro and Escudero-Vi{\~n}olo, Marcos and Besc{\'o}s, Jes{\'u}s and Garc{\'\i}a, {\'A}lvaro},
+  journal={arXiv preprint arXiv:1909.02410},
+  year={2019}
 }
 ```
 ## Acknowledgment
