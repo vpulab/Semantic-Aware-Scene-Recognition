@@ -379,7 +379,7 @@ def saveActivationMap(model, feature_conv, idx, sceneLabelGT, RGB_image, classes
                     org=(20, 90), fontFace=cv2.FONT_HERSHEY_DUPLEX, fontScale=1, color=[255, 255, 255])
         cv2.putText(result, "Top3: " + classes[idx[2]],
                     org=(20, 120), fontFace=cv2.FONT_HERSHEY_DUPLEX, fontScale=1, color=[255, 255, 255])
-        Path = '/home/vpu/Multi-Task-Scene-Recognition/Images/Scene Activation Maps/' + set + '/'
+        Path = '/home/vpu/Semantic-Aware-Scene-Recognition/Results/Scene Activation Maps/' + set + '/'
         cv2.imwrite(Path + 'AM' + str(i+1).zfill(5) + '.jpg', result)
 
         # Save plain activation map

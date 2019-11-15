@@ -2,7 +2,7 @@
 
 DATASET_DIR=$1
 
-#wget -nc -P $DATASET_DIR http://data.csail.mit.edu/places/places365/places365standard_easyformat.tar
+wget -nc -P $DATASET_DIR http://data.csail.mit.edu/places/places365/places365standard_easyformat.tar
 
 unzip -n $DATASET_DIR/places365standard_easyformat.tar -d $DATASET_DIR
 

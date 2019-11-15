@@ -7,13 +7,26 @@ class RGBBranch(nn.Module):
     Generate Model Architecture
     """
 
-    def __init__(self, scene_classes=1055):
+    def __init__(self, arch, scene_classes=1055):
         super(RGBBranch, self).__init__()
 
-        # Load ResNet 18 pre-trained on ImageNet
-        base = resnet.resnet18(pretrained=True)
+        # --------------------------------#
+        #          Base Network           #
+        # ------------------------------- #
+        if arch == 'ResNet-18':
+            # ResNet-18 Network
+            base = resnet.resnet18(pretrained=True)
+            # Size parameters for ResNet-18
+            size_fc_RGB = 512
+        elif arch == 'ResNet-50':
+            # ResNet-50 Network
+            base = resnet.resnet50(pretrained=True)
+            # Size parameters for ResNet-50
+            size_fc_RGB = 2048
 
-        # RGB BRANCH
+        # --------------------------------#
+        #           RGB Branch            #
+        # ------------------------------- #
         # First initial block
         self.in_block = nn.Sequential(
             nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3, bias=False),
@@ -28,10 +41,12 @@ class RGBBranch(nn.Module):
         self.encoder3 = base.layer3
         self.encoder4 = base.layer4
 
-        # Final Scene Classification Layers
+        # -------------------------------------#
+        #            RGB Classifier            #
+        # ------------------------------------ #
         self.dropout = nn.Dropout(0.3)
         self.avgpool = nn.AvgPool2d(7, stride=1)
-        self.fc = nn.Linear(512, scene_classes)
+        self.fc = nn.Linear(size_fc_RGB, scene_classes)
 
         # Loss
         self.criterion = nn.CrossEntropyLoss()
@@ -42,14 +57,18 @@ class RGBBranch(nn.Module):
         :param x: RGB Image
         :return: Scene recognition predictions
         """
-        # RGB Branch
+        # --------------------------------#
+        #           RGB Branch            #
+        # ------------------------------- #
         x, pool_indices = self.in_block(x)
         e1 = self.encoder1(x)
         e2 = self.encoder2(e1)
         e3 = self.encoder3(e2)
         e4 = self.encoder4(e3)
 
-        # Scene Classification FC layer
+        # -------------------------------------#
+        #            RGB Classifier            #
+        # ------------------------------------ #
         act = self.avgpool(e4)
         act = act.view(act.size(0), -1)
         act = self.dropout(act)

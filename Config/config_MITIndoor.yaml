@@ -14,8 +14,9 @@ DATALOADER:
     NUM_WORKERS: 8
 
 MODEL:
+    ARCH: ResNet-50
     PATH: ./Data/Model Zoo/MITIndoor67/
-    NAME: SAScene_ResNet18_MIT
+    NAME: SAScene_ResNet50_MIT
     ONLY_RGB: FALSE
     ONLY_SEM: FALSE
 

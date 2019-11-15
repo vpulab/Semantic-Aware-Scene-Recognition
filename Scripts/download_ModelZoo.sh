@@ -18,11 +18,17 @@ echo -e "\033[32m $MODEL_DIR/ADEChallengeData2016/ \033[00m"
 echo ========================================================================
 
 # MIT Indoor 67 Models
-# Ours
+# Ours. Backbone ResNet-18
 wget -O "$MODEL_DIR/MITIndoor67/SAScene_ResNet18_MIT.pth.tar" https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EY5d6PU_Jo9ElazZpYvGn5cBI6aZChWQiyC3pXzey6L3cA?download=1
 
-# RGB Branch
+# Ours. Backbone ResNet-50
+wget -O "$MODEL_DIR/MITIndoor67/SAScene_ResNet50_MIT.pth.tar" https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EdM4OL-XCzxLpX8YEQ02msUBeEV1Swax0u5Gws6TKtcibw?download=1
+
+# RGB Branch. Backbone ResNet-18
 wget -O "$MODEL_DIR/MITIndoor67/RGB_ResNet18_MIT.pth.tar" https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EQfMFvxYdIFPmY6jJ4OPCssB8axLM9KyW7JWGIoOVkF0oQ?download=1
+
+# RGB Branch. Backbone ResNet-50
+wget -O "$MODEL_DIR/MITIndoor67/RGB_ResNet50_MIT.pth.tar" https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EUR0-OHoGOZIhh5ae5mCiFEBnsXJ3EJe93Kb4KfPvUMmGQ?download=1
 
 # Semantic Branch
 wget -O "$MODEL_DIR/MITIndoor67/SemBranch_MIT.pth.tar" https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/ETRa2iuWq-BKqyEKTnSY_VkBzsO2FbSZvTyav5fi5iDpug?download=1
@@ -32,13 +38,18 @@ echo "MIT Indoor 67 Models saved to: "
 echo -e "\033[32m $MODEL_DIR/MITIndoor67/ \033[00m"
 echo ========================================================================
 
-
 # SUN 397 Models
-# Ours
+# Ours. Backbone ResNet-18
 wget -O "$MODEL_DIR/SUN397/SAScene_ResNet18_SUN.pth.tar" https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EcNjUGAgE1dCss00_6A05_oBMjSUviEYigm0F_QcmW914g?download=1
 
-# RGB Branch
+# Ours. Backbone ResNet-50
+wget -O "$MODEL_DIR/SUN397/SAScene_ResNet50_SUN.pth.tar" https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EZxsF-jz-lJJlKyDg0aJZp0BlKHiEa3vszzc5UYwuRCVSg?download=1
+
+# RGB Branch. Backbone ResNet-18
 wget -O "$MODEL_DIR/SUN397/RGB_ResNet18_SUN.pth.tar" https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/ERFBOWinVolPuYkAjdipF00BHxeQ9mjzlO5Oc_x3NLzDdw?download=1
+
+# RGB Branch. Backbone ResNet-50
+wget -O "$MODEL_DIR/SUN397/RGB_ResNet50_SUN.pth.tar" https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EehUiiT53QtAr_NF74Rlk7gB1xaBhvppctChoALhMS5cCg?download=1
 
 # Semantic Branch
 wget -O "$MODEL_DIR/SUN397/SemBranch_SUN.pth.tar" https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EQxpscYkhY5Nh55sdSgaINkBcqSMZ9b32K8AbrDfUKO2_w?download=1
@@ -47,7 +58,6 @@ echo ========================================================================
 echo "SUN 397 Models saved to: "
 echo -e "\033[32m $MODEL_DIR/SUN397/ \033[00m"
 echo ========================================================================
-
 
 # Places 365 Models
 # Ours

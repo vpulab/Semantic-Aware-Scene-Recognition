@@ -19,6 +19,7 @@ from SASceneNet import SASceneNet
 from Libs.Datasets.ADE20KDataset import ADE20KDataset
 from Libs.Datasets.MITIndoor67Dataset import MITIndoor67Dataset
 from Libs.Datasets.SUN397Dataset import SUN397Dataset
+from Libs.Datasets.Places365Dataset import Places365Dataset
 from Libs.Utils import utils
 from Libs.Utils.torchsummary import torchsummary
 import numpy as np
@@ -43,7 +44,7 @@ def evaluationDataLoader(dataloader, model, set):
     SceneGTLabels = np.zeros(len(dataloader))
 
     # Extract batch size
-    batch_size = CONFIG['TRAINING']['BATCH_SIZE']['TEST']
+    batch_size = CONFIG['VALIDATION']['BATCH_SIZE']['TEST']
 
     # Start data time
     data_time_start = time.time()
@@ -157,13 +158,15 @@ print('-' * 65)
 # Instantiate network
 if CONFIG['MODEL']['ONLY_RGB']:
     print('Evaluating ONLY RGB branch')
-    model = RGBBranch(scene_classes=CONFIG['DATASET']['N_CLASSES_SCENE'])
+    print('Selected RGB backbone architecture: ' + CONFIG['MODEL']['ARCH'])
+    model = RGBBranch(arch=CONFIG['MODEL']['ARCH'], scene_classes=CONFIG['DATASET']['N_CLASSES_SCENE'])
 elif CONFIG['MODEL']['ONLY_SEM']:
     print('Evaluating ONLY SEM branch')
     model = SemBranch(scene_classes=CONFIG['DATASET']['N_CLASSES_SCENE'], semantic_classes=CONFIG['DATASET']['N_CLASSES_SEM'])
 else:
     print('Evaluating complete model')
-    model = SASceneNet(scene_classes=CONFIG['DATASET']['N_CLASSES_SCENE'], semantic_classes=CONFIG['DATASET']['N_CLASSES_SEM'])
+    print('Selected RG backbone architecture: ' + CONFIG['MODEL']['ARCH'])
+    model = SASceneNet(arch=CONFIG['MODEL']['ARCH'], scene_classes=CONFIG['DATASET']['N_CLASSES_SCENE'], semantic_classes=CONFIG['DATASET']['N_CLASSES_SEM'])
 
 
 # Load the trained model
@@ -280,18 +283,18 @@ torchsummary.summary(model, [(3, 224, 224), (CONFIG['DATASET']['N_CLASSES_SEM'] 
 print('Evaluating dataset ...')
 
 # Evaluate model on training set
-train_top1, train_top2, train_top5, train_loss, train_ClassTPDic\
-    = evaluationDataLoader(train_loader, model, set='Training')
-
-# Save Training Class Accuracy
-train_ClassAcc_top1 = (train_ClassTPDic['Top1'] / (TrainHist + 0.0001)) * 100
-np.savetxt(CONFIG['EXP']['OUTPUT_DIR'] + '/TrainingTop1ClassAccuracy.txt', np.transpose(train_ClassAcc_top1), '%f')
-
-train_ClassAcc_top2 = (train_ClassTPDic['Top2'] / (TrainHist + 0.0001)) * 100
-np.savetxt(CONFIG['EXP']['OUTPUT_DIR'] + '/TrainingTop2ClassAccuracy.txt', np.transpose(train_ClassAcc_top2), '%f')
-
-train_ClassAcc_top5 = (train_ClassTPDic['Top5'] / (TrainHist + 0.0001)) * 100
-np.savetxt(CONFIG['EXP']['OUTPUT_DIR'] + '/TrainingTop5ClassAccuracy.txt', np.transpose(train_ClassAcc_top5), '%f')
+# train_top1, train_top2, train_top5, train_loss, train_ClassTPDic\
+#     = evaluationDataLoader(train_loader, model, set='Training')
+#
+# # Save Training Class Accuracy
+# train_ClassAcc_top1 = (train_ClassTPDic['Top1'] / (TrainHist + 0.0001)) * 100
+# np.savetxt(CONFIG['EXP']['OUTPUT_DIR'] + '/TrainingTop1ClassAccuracy.txt', np.transpose(train_ClassAcc_top1), '%f')
+#
+# train_ClassAcc_top2 = (train_ClassTPDic['Top2'] / (TrainHist + 0.0001)) * 100
+# np.savetxt(CONFIG['EXP']['OUTPUT_DIR'] + '/TrainingTop2ClassAccuracy.txt', np.transpose(train_ClassAcc_top2), '%f')
+#
+# train_ClassAcc_top5 = (train_ClassTPDic['Top5'] / (TrainHist + 0.0001)) * 100
+# np.savetxt(CONFIG['EXP']['OUTPUT_DIR'] + '/TrainingTop5ClassAccuracy.txt', np.transpose(train_ClassAcc_top5), '%f')
 
 # Evaluate model on validation set
 val_top1, val_top2, val_top5, val_loss, val_ClassTPDic = evaluationDataLoader(val_loader, model, set='Validation')
@@ -310,9 +313,9 @@ np.savetxt(CONFIG['EXP']['OUTPUT_DIR'] + '/ValidationTop5ClassAccuracy.txt', np.
 print('-' * 65)
 print('Evaluation statistics:')
 
-print('Train results     : Loss {train_loss:.3f}, Prec@1 {top1:.3f}, Prec@2 {top2:.3f}, Prec@5 {top5:.3f}, '
-      'Mean Class Accuracy {MCA:.3f}'.format(train_loss=train_loss, top1=train_top1, top2=train_top2, top5=train_top5,
-                                              MCA=np.mean(train_ClassAcc_top1)))
+# print('Train results     : Loss {train_loss:.3f}, Prec@1 {top1:.3f}, Prec@2 {top2:.3f}, Prec@5 {top5:.3f}, '
+#       'Mean Class Accuracy {MCA:.3f}'.format(train_loss=train_loss, top1=train_top1, top2=train_top2, top5=train_top5,
+#                                               MCA=np.mean(train_ClassAcc_top1)))
 
 print('Validation results: Loss {val_loss:.3f}, Prec@1 {top1:.3f}, Prec@2 {top2:.3f}, Prec@5 {top5:.3f}, '
       'Mean Class Accuracy {MCA:.3f}'.format(val_loss=val_loss, top1=val_top1, top2=val_top2, top5=val_top5,

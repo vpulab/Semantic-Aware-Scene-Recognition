@@ -15,6 +15,22 @@ Data/Datasets/MITIndoor67/train/
 
 Data/Datasets/MITIndoor67/val/
 
+Data/Datasets/SUN397/noisy_annotations_RGB/
+
+Data/Datasets/SUN397/noisy_scores_RGB/
+
+Data/Datasets/SUN397/train/
+
+Data/Datasets/SUN397/val/
+
+Data/Datasets/places365_standard/noisy_annotations_RGB/
+
+Data/Datasets/places365_standard/noisy_scores_RGB/
+
+Data/Datasets/places365_standard/train/
+
+Data/Datasets/places365_standard/val/
+
 Results/
 
 __pycache__/

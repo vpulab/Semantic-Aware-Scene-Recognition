@@ -46,16 +46,40 @@ class ChannelAttention(nn.Module):
 
 class SASceneNet(nn.Module):
     """
-    Generate Model Architecture
+    Generates model architecture
     """
 
-    def __init__(self, scene_classes, semantic_classes=151):
+    def __init__(self, arch, scene_classes, semantic_classes=151):
+        """
+        Initialization of the network
+        :param arch: Desired backbone for RGB branch. Either ResNet-18 or ResNet-50
+        :param scene_classes: Number of scene classes in the dataset.
+        :param semantic_classes: Number of semantic classes. This should not be changed unless other semantic
+                                 segmentation model is used
+        """
         super(SASceneNet, self).__init__()
 
-        # Load ResNet 18 pre-trained on ImageNet
-        base = resnet.resnet18(pretrained=False)
+        # --------------------------------#
+        #          Base Network           #
+        # ------------------------------- #
+        if arch == 'ResNet-18':
+            # ResNet-18 Network
+            base = resnet.resnet18(pretrained=True)
 
-        # RGB BRANCH
+            # Size parameters for ResNet-18
+            size_fc_RGB = 512
+            sizes_lastConv = [512, 512, 512]
+        elif arch == 'ResNet-50':
+            # ResNet-50 Network
+            base = resnet.resnet50(pretrained=True)
+
+            # Size parameters for ResNet-50
+            size_fc_RGB = 2048
+            sizes_lastConv = [2048, 1024, 1024]
+
+        # --------------------------------#
+        #           RGB Branch            #
+        # ------------------------------- #
         # First initial block
         self.in_block = nn.Sequential(
             nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3, bias=False),
@@ -68,7 +92,9 @@ class SASceneNet(nn.Module):
         self.encoder3 = base.layer3
         self.encoder4 = base.layer4
 
-        # Semantic Branch
+        # --------------------------------#
+        #        Semantic Branch          #
+        # ------------------------------- #
         self.in_block_sem = nn.Sequential(
             nn.Conv2d(semantic_classes+1, 64, kernel_size=7, stride=2, padding=3, bias=False),
             nn.BatchNorm2d(64),
@@ -79,21 +105,26 @@ class SASceneNet(nn.Module):
         self.in_block_sem_2 = BasicBlockSem(128, 256, kernel_size=3, stride=2, padding=1)
         self.in_block_sem_3 = BasicBlockSem(256, 512, kernel_size=3, stride=2, padding=1)
 
-        # ResNet-18
+        # -------------------------------------#
+        #   RGB & Semantic Branch Classifiers  #
+        # ------------------------------------ #
         # Semantic Scene Classification Layers
         self.fc_SEM = nn.Linear(512, scene_classes)
 
-        # RGB Scene Classification Layers
-        self.fc_RGB = nn.Linear(512, scene_classes)
+        # RGB Scene Classification Layers.
+        self.fc_RGB = nn.Linear(size_fc_RGB, scene_classes)
 
+        # --------------------------------#
+        #         Attention Module        #
+        # ------------------------------- #
         # Final Scene Classification Layers
         self.lastConvRGB1 = nn.Sequential(
-            nn.Conv2d(512, 512, kernel_size=3, bias=False),
-            nn.BatchNorm2d(512),
+            nn.Conv2d(sizes_lastConv[0], sizes_lastConv[1], kernel_size=3, bias=False),
+            nn.BatchNorm2d(sizes_lastConv[1]),
             nn.ReLU(inplace=True),
         )
         self.lastConvRGB2 = nn.Sequential(
-            nn.Conv2d(512, 1024, kernel_size=3, bias=False),
+            nn.Conv2d(sizes_lastConv[2], 1024, kernel_size=3, bias=False),
             nn.BatchNorm2d(1024),
             nn.ReLU(inplace=True),
         )
@@ -108,6 +139,9 @@ class SASceneNet(nn.Module):
             nn.ReLU(inplace=True),
         )
 
+        # --------------------------------#
+        #            Classifier           #
+        # ------------------------------- #
         self.dropout = nn.Dropout(0.3)
         self.sigmoid = nn.Sigmoid()
         self.avgpool7 = nn.AvgPool2d(7, stride=1)
@@ -124,7 +158,9 @@ class SASceneNet(nn.Module):
         :param sem: Semantic Segmentation score tensor
         :return: Scene recognition predictions
         """
-        # RGB Branch
+        # --------------------------------#
+        #           RGB Branch            #
+        # ------------------------------- #
         x, pool_indices = self.in_block(x)
         e1 = self.encoder1(x)
         e2 = self.encoder2(e1)
@@ -137,7 +173,9 @@ class SASceneNet(nn.Module):
         act_rgb = self.dropout(act_rgb)
         act_rgb = self.fc_RGB(act_rgb)
 
-        # Semantic Branch
+        # --------------------------------#
+        #        Semantic Branch          #
+        # ------------------------------- #
         y = self.in_block_sem(sem)
         y1 = self.in_block_sem_1(y)
         y2 = self.in_block_sem_2(y1)
@@ -149,7 +187,9 @@ class SASceneNet(nn.Module):
         act_sem = self.dropout(act_sem)
         act_sem = self.fc_SEM(act_sem)
 
-        # Attention Module Layers
+        # --------------------------------#
+        #         Attention Module        #
+        # ------------------------------- #
         e5 = self.lastConvRGB1(e4)
         e6 = self.lastConvRGB2(e5)
 
@@ -159,7 +199,9 @@ class SASceneNet(nn.Module):
         # Attention Mechanism
         e7 = e6 * self.sigmoid(y5)
 
-        # Scene Classification FC layer
+        # --------------------------------#
+        #            Classifier           #
+        # ------------------------------- #
         e8 = self.avgpool3(e7)
         act = e8.view(e8.size(0), -1)
         act = self.dropout(act)

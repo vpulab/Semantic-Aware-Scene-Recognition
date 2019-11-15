@@ -1,6 +1,8 @@
 # Semantic-Aware Scene Recognition
 Official Pytorch Implementation of [Semantic-Aware Scene Recognition](https://arxiv.org/abs/1909.02410) by Alejandro López-Cifuentes, Marcos Escudero-Viñolo, Jesús Bescós and Álvaro García-Martín.
 
+This paper is currently under Peer Review Revision in Elsevier Pattern Recognition Journal.
+
 ![Example Focus](Docs/ExampleFocus.png)
 
 ## Summary
@@ -110,13 +112,17 @@ In order to evaluate the models independently, download them from the following 
  - [Semantic Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EYJ593CJEylMkRoyAO_UCWUBGKbUJIpGO_1VzeHeQYvBEA?download=1)
 
 **MIT Indoor 67**
- - [Ours](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EY5d6PU_Jo9ElazZpYvGn5cBI6aZChWQiyC3pXzey6L3cA?download=1)
- - [RGB Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EQfMFvxYdIFPmY6jJ4OPCssB8axLM9KyW7JWGIoOVkF0oQ?download=1)
+ - [Ours (ResNet-18 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EY5d6PU_Jo9ElazZpYvGn5cBI6aZChWQiyC3pXzey6L3cA?download=1)
+ -  [Ours* (ResNet-50 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EdM4OL-XCzxLpX8YEQ02msUBeEV1Swax0u5Gws6TKtcibw?download=1)
+ - [RGB Branch (ResNet-18 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EQfMFvxYdIFPmY6jJ4OPCssB8axLM9KyW7JWGIoOVkF0oQ?download=1)
+ -  [RGB Branch* (ResNet-50 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EUR0-OHoGOZIhh5ae5mCiFEBnsXJ3EJe93Kb4KfPvUMmGQ?download=1)
  - [Semantic Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/ETRa2iuWq-BKqyEKTnSY_VkBzsO2FbSZvTyav5fi5iDpug?download=1)
 
 **SUN 397**
- - [Ours](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EcNjUGAgE1dCss00_6A05_oBMjSUviEYigm0F_QcmW914g?download=1)
- - [RGB Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/ERFBOWinVolPuYkAjdipF00BHxeQ9mjzlO5Oc_x3NLzDdw?download=1)
+ - [Ours (ResNet-18 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EcNjUGAgE1dCss00_6A05_oBMjSUviEYigm0F_QcmW914g?download=1)
+ - [Ours* (ResNet-50 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EZxsF-jz-lJJlKyDg0aJZp0BlKHiEa3vszzc5UYwuRCVSg?download=1)
+ - [RGB Branch (ResNet-18 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/ERFBOWinVolPuYkAjdipF00BHxeQ9mjzlO5Oc_x3NLzDdw?download=1)
+ - [RGB Branch* (ResNet-50 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EehUiiT53QtAr_NF74Rlk7gB1xaBhvppctChoALhMS5cCg?download=1)
  - [Semantic Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EQxpscYkhY5Nh55sdSgaINkBcqSMZ9b32K8AbrDfUKO2_w?download=1)
 
 **Places 365**
@@ -132,6 +138,8 @@ In order to evaluate models run `evaluation.py` file from the respository folder
 Example for ADE20K Dataset:
 
     python evaluation.py --ConfigPath Config/config_ADE20K.yaml
+    
+All the desired configuration (backbone architecture to use, model to load, batch size...etc) should be changed in each separate YAML configuration file.
     
 Computed performance metrics for both training and validation sets are:
  - Top@1

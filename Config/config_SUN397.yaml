@@ -14,9 +14,10 @@ DATALOADER:
     NUM_WORKERS: 8
 
 MODEL:
+    ARCH: ResNet-50
     PATH: ./Data/Model Zoo/SUN397/
-    NAME: SAScene_ResNet18_SUN
-    ONLY_RGB: FALSE
+    NAME: RGB_ResNet50_SUN
+    ONLY_RGB: TRUE
     ONLY_SEM: FALSE
 
 TRAINING:
