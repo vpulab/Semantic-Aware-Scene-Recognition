@@ -19,6 +19,11 @@ Proceed with the following instructions to download and setup MIT Indoor 67 Data
 		    ROOT: [WRITE PATH HERE]
 
 ### [RECOMMENDED] Precomputed Semantic Segmentation Information
+Precomputed Semantic Segmentation includes two folders:
+ - noisy_annotations_RGB: This folder includes Top@3 Semantic labels per pixel in a 3-channel image.
+ - noisy_scores_RGB: This folder contains Top@3 scores per pixel in a 3-channel image.
+
+In order to download follow the next steps:
 
 1. To download precomputed Semantic Segmentation maks for faster training and validation (labels and scores) run the following script (~1GB) from the repository folder:
 
