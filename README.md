@@ -34,11 +34,11 @@ The propose CNN architecture is as follows:
 | MPP-FCR2 | AlexNet | 62 M | 75.67 |
 | DSFL + CNN (7 Scales) | AlexNet | 62M | 76.23 |
 | MPP + DSFL | AlexNet | 62 M | 80.78 |
-| CFV | VGG-19 | 62 M | 81.00 |
-| CS | VGG-19 | 62 M | 82.24 |
-| SDO (1 Scale) | 2 x VGG-19 | 62 M | 83.98 |
-| VSAD | 2 x VGG-19 | 62 M | 86.20 |
-| SDO (9 Scales) | 2 x VGG-19 | 62 M | 86.76 |
+| CFV | VGG-19 | 143 M | 81.00 |
+| CS | VGG-19 | 143 M | 82.24 |
+| SDO (1 Scale) | 2 x VGG-19 | 276 M | 83.98 |
+| VSAD | 2 x VGG-19 | 276 M | 86.20 |
+| SDO (9 Scales) | 2 x VGG-19 | 276 M | 86.76 |
 | Ours | ResNet-18 + Sem Branch + G-RGB-H | 47 M | 85.58 |
 | **Ours*** | **ResNet-50 + Sem Branch + G-RGB-H** | **85 M** | **87.10** |
 
