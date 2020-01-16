@@ -12,7 +12,7 @@ Semantic-Aware Scene Recognition
 
 Official Pytorch Implementation of [Semantic-Aware Scene Recognition](https://arxiv.org/abs/1909.02410) by Alejandro López-Cifuentes, Marcos Escudero-Viñolo, Jesús Bescós and Álvaro García-Martín.
 
-This paper is currently under Peer Review Revision in Elsevier Pattern Recognition Journal.
+This paper is currently under Peer Review Revision in [Elsevier Pattern Recognition Journal](https://www.journals.elsevier.com/pattern-recognition/).
 
 <p align="center">
 	<img alt="ExampleFocus" src="/Docs/ExampleFocus.png">
@@ -31,7 +31,7 @@ The propose CNN architecture is as follows:
 	<img alt="NetworkArchitecture" src="/Docs/NetworkArchitecture.png">
 </p>
 
-## Results
+## State-of-the-art Results
 ### ADE20K Dataset
 | RGB  | Semantic | Top@1 | Top@2 | Top@5 | MCA |
 |:--:|:--:|:--:|:--:|:--:|:--:|
@@ -166,7 +166,7 @@ Computed performance metrics for both training and validation sets are:
 
 
 ## Citation
-If you find this work useful, please consider citing:
+If you find this code and work useful, please consider citing:
 ```
 @article{lopez2019semantic,
   title={Semantic-Aware Scene Recognition},
