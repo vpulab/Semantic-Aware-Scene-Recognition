@@ -3,9 +3,7 @@ Semantic-Aware Scene Recognition
 </h1>
 
 <p align="center">
-	<a href="https://badge.fury.io/gh/vpulab%2FSemantic-Aware-Scene-Recognition">
-		<img src="https://badge.fury.io/gh/vpulab%2FSemantic-Aware-Scene-			Recognition.svg" alt="GitHub version" height="18">
-	</a>
+	<a href="https://badge.fury.io/gh/vpulab%2FSemantic-Aware-Scene-Recognition"><img src="https://badge.fury.io/gh/vpulab%2FSemantic-Aware-Scene-Recognition.svg" alt="GitHub version" height="18"></a>
 	<a href="https://github.com/vpulab/Semantic-Aware-Scene-Recognition">
 		<img alt="GitHub license" src="https://img.shields.io/github/license/vpulab/Semantic-Aware-Scene-Recognition">
 	</a>
