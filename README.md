@@ -1,4 +1,7 @@
-# Semantic-Aware Scene Recognition
+<h1 align="center">
+Semantic-Aware Scene Recognition
+</h1>
+
 Official Pytorch Implementation of [Semantic-Aware Scene Recognition](https://arxiv.org/abs/1909.02410) by Alejandro López-Cifuentes, Marcos Escudero-Viñolo, Jesús Bescós and Álvaro García-Martín.
 
 This paper is currently under Peer Review Revision in Elsevier Pattern Recognition Journal.
@@ -160,4 +163,9 @@ If you find this work useful, please consider citing:
 ```
 ## Acknowledgment
 This study has been partially supported by the Spanish Government through its TEC2017-88169-R MobiNetVideo project.
+
+<p align="center">
+	<img alt="LogoMinisterio" src="/Docs/LogoMinisterio.png">
+</p>
+
 ![Logo Ministerio](Docs/LogoMinisterio.png)
