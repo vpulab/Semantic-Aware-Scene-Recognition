@@ -2,11 +2,24 @@
 Semantic-Aware Scene Recognition
 </h1>
 
+<p align="center">
+	<a href="https://badge.fury.io/gh/vpulab%2FSemantic-Aware-Scene-Recognition">
+		<img src="https://badge.fury.io/gh/vpulab%2FSemantic-Aware-Scene-			Recognition.svg" alt="GitHub version" height="18">
+	</a>
+	<a href="https://github.com/vpulab/Semantic-Aware-Scene-Recognition">
+		<img alt="GitHub license" src="https://img.shields.io/github/license/vpulab/Semantic-Aware-Scene-Recognition">
+	</a>
+	<a href="https://github.com/vpulab/Semantic-Aware-Scene-Recognition/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/vpulab/Semantic-Aware-Scene-Recognition"></a>
+</p>
+
 Official Pytorch Implementation of [Semantic-Aware Scene Recognition](https://arxiv.org/abs/1909.02410) by Alejandro López-Cifuentes, Marcos Escudero-Viñolo, Jesús Bescós and Álvaro García-Martín.
 
 This paper is currently under Peer Review Revision in Elsevier Pattern Recognition Journal.
 
-![Example Focus](Docs/ExampleFocus.png)
+<p align="center">
+	<img alt="ExampleFocus" src="/Docs/ExampleFocus.png">
+</p>
+
 
 ## Summary
 This paper propose to improve scene recognition by using object information to focalize learning during the training process. The main contributions of the paper are threefold: 
@@ -16,7 +29,9 @@ This paper propose to improve scene recognition by using object information to f
  - We validate the effectiveness of the proposed method through experimental results on public scene recognition datasets such as ADE20K, MIT Indoor 67, SUN 397 and Places365 obtaining state-of-the-art results.
 
 The propose CNN architecture is as follows:
-![Network Architecture](Docs/NetworkArchitecture.png)
+<p align="center">
+	<img alt="NetworkArchitecture" src="/Docs/NetworkArchitecture.png">
+</p>
 
 ## Results
 ### ADE20K Dataset
@@ -25,6 +40,7 @@ The propose CNN architecture is as follows:
 | &#10003; |   | 55.90 | 67.25 | 78.00 | 20.96 |
 |   | &#10003; | 50.60 | 60.45| 72.10 | 12.17 |
 | **&#10003;** | **&#10003;** | **62.55** | **73.25** | **82.75** | **27.00** |
+
 
 ### MIT Indoor  67 Dataset
 | Method | Backbone| Number of Parameters | Top@1 |
@@ -156,7 +172,8 @@ If you find this work useful, please consider citing:
 ```
 @article{lopez2019semantic,
   title={Semantic-Aware Scene Recognition},
-  author={L{\'o}pez-Cifuentes, Alejandro and Escudero-Vi{\~n}olo, Marcos and Besc{\'o}s, Jes{\'u}s and Garc{\'\i}a, {\'A}lvaro},
+  author={L{\'o}pez-Cifuentes, Alejandro and Escudero-Vi{\~n}olo, Marcos and 
+  Besc{\'o}s, Jes{\'u}s and Garc{\'\i}a, {\'A}lvaro},
   journal={arXiv preprint arXiv:1909.02410},
   year={2019}
 }
@@ -167,5 +184,3 @@ This study has been partially supported by the Spanish Government through its TE
 <p align="center">
 	<img alt="LogoMinisterio" src="/Docs/LogoMinisterio.png">
 </p>
-
-![Logo Ministerio](Docs/LogoMinisterio.png)
