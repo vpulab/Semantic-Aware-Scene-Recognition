@@ -166,12 +166,15 @@ Computed performance metrics for both training and validation sets are:
 ## Citation
 If you find this code and work useful, please consider citing:
 ```
-@article{lopez2019semantic,
-  title={Semantic-Aware Scene Recognition},
-  author={L{\'o}pez-Cifuentes, Alejandro and Escudero-Vi{\~n}olo, Marcos and 
-  Besc{\'o}s, Jes{\'u}s and Garc{\'\i}a, {\'A}lvaro},
-  journal={arXiv preprint arXiv:1909.02410},
-  year={2019}
+@article{lopez2020semantic,
+title = "Semantic-aware scene recognition",
+journal = "Pattern Recognition",
+volume = "102",
+pages = "107256",
+year = "2020",
+issn = "0031-3203",
+doi = "https://doi.org/10.1016/j.patcog.2020.107256",
+author = "Alejandro López-Cifuentes and Marcos Escudero-Viñolo and Jesús Bescós and Álvaro García-Martín",
 }
 ```
 ## Acknowledgment
