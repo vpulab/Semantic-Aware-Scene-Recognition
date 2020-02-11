@@ -10,9 +10,7 @@ Semantic-Aware Scene Recognition
 	<a href="https://github.com/vpulab/Semantic-Aware-Scene-Recognition/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/vpulab/Semantic-Aware-Scene-Recognition"></a>
 </p>
 
-Official Pytorch Implementation of [Semantic-Aware Scene Recognition](https://arxiv.org/abs/1909.02410) by Alejandro López-Cifuentes, Marcos Escudero-Viñolo, Jesús Bescós and Álvaro García-Martín.
-
-This paper is currently under Peer Review Revision in [Elsevier Pattern Recognition Journal](https://www.journals.elsevier.com/pattern-recognition/).
+Official Pytorch Implementation of [Semantic-Aware Scene Recognition](https://www.sciencedirect.com/science/article/pii/S0031320320300613) by Alejandro López-Cifuentes, Marcos Escudero-Viñolo, Jesús Bescós and Álvaro García-Martín (Elsevier Pattern Recognition).
 
 <p align="center">
 	<img alt="ExampleFocus" src="/Docs/ExampleFocus.png">
