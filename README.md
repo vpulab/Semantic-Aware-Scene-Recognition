@@ -106,10 +106,10 @@ To create and setup the Anaconda Envirmorent run the following terminal command 
 ### Datasets
 Download and setup instructions for each datasets are provided in the follwing links:
 
- - [ADE20K](https://github.com/alexlopezcifuentes/Semantic-Aware-Scene-Recognition/tree/master/Data/Datasets/ADEChallengeData2016)
- - [MIT Indoor 67](https://github.com/alexlopezcifuentes/Semantic-Aware-Scene-Recognition/tree/master/Data/Datasets/MITIndoor67)
- -  [SUN 397](https://github.com/alexlopezcifuentes/Semantic-Aware-Scene-Recognition/tree/master/Data/Datasets/SUN397)
- -  [Places 365](https://github.com/alexlopezcifuentes/Semantic-Aware-Scene-Recognition/tree/master/Data/Datasets/places365_standard)
+ - [ADE20K](https://github.com/vpulab/Semantic-Aware-Scene-Recognition/tree/master/Data/Datasets/ADEChallengeData2016)
+ - [MIT Indoor 67](https://github.com/vpulab/Semantic-Aware-Scene-Recognition/tree/master/Data/Datasets/MITIndoor67)
+ -  [SUN 397](https://github.com/vpulab/Semantic-Aware-Scene-Recognition/tree/master/Data/Datasets/SUN397)
+ -  [Places 365](https://github.com/vpulab/Semantic-Aware-Scene-Recognition/tree/master/Data/Datasets/places365_standard)
 
 
 ## Evaluation
@@ -122,28 +122,28 @@ In order to evaluate the models independently, download them from the following 
     bash ./Scripts/download_ModelZoo.sh
 
 **ADE20K**
- - [Ours](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EdjBkchzYmxMtemweugTNp8BAK_kzUmHwvFbmXgsE_VKRQ?download=1)
- - [RGB Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EY-boXwjIhZMq0LkaIqng48BY-ezHhF4t-0ctwOmSUYAjw?download=1)
- - [Semantic Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EYJ593CJEylMkRoyAO_UCWUBGKbUJIpGO_1VzeHeQYvBEA?download=1)
+ - [Ours](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/ADE20K/SAScene_ResNet18_ADE.pth.tar)
+ - [RGB Branch](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/ADE20K/RGB_ResNet18_ADE.pth.tar)
+ - [Semantic Branch](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/ADE20K/SemBranch_ADE.pth.tar)
 
 **MIT Indoor 67**
- - [Ours (ResNet-18 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EY5d6PU_Jo9ElazZpYvGn5cBI6aZChWQiyC3pXzey6L3cA?download=1)
- -  [Ours* (ResNet-50 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EdM4OL-XCzxLpX8YEQ02msUBeEV1Swax0u5Gws6TKtcibw?download=1)
- - [RGB Branch (ResNet-18 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EQfMFvxYdIFPmY6jJ4OPCssB8axLM9KyW7JWGIoOVkF0oQ?download=1)
- -  [RGB Branch* (ResNet-50 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EUR0-OHoGOZIhh5ae5mCiFEBnsXJ3EJe93Kb4KfPvUMmGQ?download=1)
- - [Semantic Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/ETRa2iuWq-BKqyEKTnSY_VkBzsO2FbSZvTyav5fi5iDpug?download=1)
+ - [Ours (ResNet-18 backbone)](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/MIT_Indoor_67/SAScene_ResNet18_MIT.pth.tar)
+ -  [Ours* (ResNet-50 backbone)](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/MIT_Indoor_67/SAScene_ResNet50_MIT.pth.tar)
+ - [RGB Branch (ResNet-18 backbone)](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/MIT_Indoor_67/RGB_ResNet18_MIT.pth.tar)
+ -  [RGB Branch* (ResNet-50 backbone)](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/MIT_Indoor_67/RGB_ResNet50_MIT.pth.tar)
+ - [Semantic Branch](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/MIT_Indoor_67/SemBranch_MIT.pth.tar)
 
 **SUN 397**
- - [Ours (ResNet-18 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EcNjUGAgE1dCss00_6A05_oBMjSUviEYigm0F_QcmW914g?download=1)
- - [Ours* (ResNet-50 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EZxsF-jz-lJJlKyDg0aJZp0BlKHiEa3vszzc5UYwuRCVSg?download=1)
- - [RGB Branch (ResNet-18 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/ERFBOWinVolPuYkAjdipF00BHxeQ9mjzlO5Oc_x3NLzDdw?download=1)
- - [RGB Branch* (ResNet-50 backbone)](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EehUiiT53QtAr_NF74Rlk7gB1xaBhvppctChoALhMS5cCg?download=1)
- - [Semantic Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EQxpscYkhY5Nh55sdSgaINkBcqSMZ9b32K8AbrDfUKO2_w?download=1)
+ - [Ours (ResNet-18 backbone)](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/SUN397/SAScene_ResNet18_SUN.pth.tar)
+ - [Ours* (ResNet-50 backbone)](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/SUN397/SAScene_ResNet50_SUN.pth.tar)
+ - [RGB Branch (ResNet-18 backbone)](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/SUN397/RGB_ResNet18_SUN.pth.tar)
+ - [RGB Branch* (ResNet-50 backbone)](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/SUN397/RGB_ResNet50_SUN.pth.tar)
+ - [Semantic Branch](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/SUN397/SemBranch_SUN.pth.tar)
 
 **Places 365**
- - [Ours](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/Eco7I0NbpWFFpJdYjT1om38BX2aEBR1WXXzflE2YykT0qA?download=1)
- - [RGB Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EUaPpF5MpkNCqDd04GMVnYEB6BnH5inElN9ve_trAiWg-A?download=1)
- - [Semantic Branch](https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/Ea_B3l8vdRtJg3fjhwm7KeIBCbDGV5L2MOtpo9E5GGBo3Q?download=1)
+ - [Ours](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/Places_365/SAScene_ResNet18_Places.pth.tar)
+ - [RGB Branch](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/Places_365/RGB_ResNet18_Places.pth.tar)
+ - [Semantic Branch](http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/Model_Zoo/Places_365/SemBranch_Places.pth.tar)
 	
 ### Run Evaluation
 In order to evaluate models run `evaluation.py` file from the respository folder indicating the dataset YAML configuration path:
@@ -167,14 +167,12 @@ Computed performance metrics for both training and validation sets are:
 If you find this code and work useful, please consider citing:
 ```
 @article{lopez2020semantic,
-title = "Semantic-aware scene recognition",
-journal = "Pattern Recognition",
-volume = "102",
-pages = "107256",
-year = "2020",
-issn = "0031-3203",
-doi = "https://doi.org/10.1016/j.patcog.2020.107256",
-author = "Alejandro López-Cifuentes and Marcos Escudero-Viñolo and Jesús Bescós and Álvaro García-Martín",
+  title={Semantic-Aware Scene Recognition},
+  author={L{\'o}pez-Cifuentes, Alejandro and Escudero-Vi{\~n}olo, Marcos and Besc{\'o}s, Jes{\'u}s and Garc{\'\i}a-Mart{\'\i}n, {\'A}lvaro},
+  journal={Pattern Recognition},
+  pages={107256},
+  year={2020},
+  publisher={Elsevier}
 }
 ```
 ## Acknowledgment

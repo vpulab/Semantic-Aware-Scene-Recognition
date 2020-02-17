@@ -2,7 +2,7 @@
 
 DATASET_DIR=$1
 
-wget  -O $DATASET_DIR/MIT.zip https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EdXZlW6RidhIphjkefdF4oEBwx6BYjT2y7oZn9HojJcSJQ?download=1
+wget  -O $DATASET_DIR/MIT.zip http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/MITIndoor67.zip
 
 unzip -n $DATASET_DIR/MIT.zip -d $DATASET_DIR
 

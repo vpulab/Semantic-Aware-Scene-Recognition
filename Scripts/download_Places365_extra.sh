@@ -2,7 +2,7 @@
 
 DATASET_DIR=$1
 
-wget  -O $DATASET_DIR/Places_extra.zip https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/Ee877Dqa0CFMqgJyjvj-HO8BND0yXhNviKSC0LDa8ABptw?download=1
+wget  -O $DATASET_DIR/Places_extra.zip http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/places365_standard_extra_val.zip
 
 unzip -n $DATASET_DIR/Places_extra.zip -d $DATASET_DIR
 

@@ -2,7 +2,7 @@
 
 DATASET_DIR=$1
 
-wget  -O $DATASET_DIR/SUN.zip https://dauam-my.sharepoint.com/:u:/g/personal/alejandro_lopezc01_estudiante_uam_es/EWz4fZwqQsVFrsM7D8Q0qdcB3JuHGfLj7_k9G7NViMWfqQ?download=1
+wget  -O $DATASET_DIR/SUN.zip http://www-vpu.eps.uam.es/publications/SemanticAwareSceneRecognition/SUN397.zip
 
 unzip -n $DATASET_DIR/SUN.zip -d $DATASET_DIR
 
