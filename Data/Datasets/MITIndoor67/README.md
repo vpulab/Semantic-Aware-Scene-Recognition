@@ -27,11 +27,11 @@ In order to download follow the next steps:
 
 1. To download precomputed Semantic Segmentation maks for faster training and validation (labels and scores) run the following script (~1GB) from the repository folder:
 
-		bash ./Scripts/download_MITIndoor67.sh [PATH FOR DATASET]  
+		bash ./Scripts/download_MITIndoor67_extra.sh [PATH FOR DATASET]  
 
 	For example
 
-		bash ./Scripts/download_MITIndoor67.sh ./Data/Datasets/MITIndoor67
+		bash ./Scripts/download_MITIndoor67_extra.sh ./Data/Datasets/MITIndoor67
 
 2. To use precomputed semantic segmentation activate the option `PRECOMPUTED_SEM` in `config_MITIndoor.yaml` configuration file:
 	
